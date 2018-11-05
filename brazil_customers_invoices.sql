@@ -4,8 +4,7 @@ SELECT
 	i.InvoiceId,
 	i.InvoiceDate,
 	c.CustomerId,
-	c.FirstName,
-	c.LastName,
+	c.FirstName ||' ' || c.LastName AS "Full Name",
 	c.Country
 FROM Invoice i
 LEFT JOIN Customer c ON i.CustomerId = c.CustomerId
